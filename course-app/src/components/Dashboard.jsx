@@ -9,7 +9,7 @@ const StudentDashboard = () => {
 
   useEffect(() => {
     const fetchCourse = async () => {
-      const res = await fetch("http://localhost:3000/api/all-course");
+      const res = await fetch("https://course-management-app-backend.vercel.app/api/all-course");
       const data = await res.json();
       setCourses(data);
       setShowSkeleton(false);
@@ -28,7 +28,7 @@ const StudentDashboard = () => {
         };
       })
     );
-    const res = await fetch("http://localhost:3000/api/course-done-update", {
+    const res = await fetch("https://course-management-app-backend.vercel.app/api/course-done-update", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

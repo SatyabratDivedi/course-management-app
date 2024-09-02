@@ -14,7 +14,7 @@ const CourseList = () => {
 
   useEffect(() => {
     const fetchCourse = async () => {
-      const res = await fetch("http://localhost:3000/api/all-course");
+      const res = await fetch("https://course-management-app-backend.vercel.app/api/all-course");
       const data = await res.json();
       dispatch(setCourses(data));
       dispatch(enrollCourse(data));
